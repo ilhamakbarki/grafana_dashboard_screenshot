@@ -5,3 +5,5 @@ jspm_packages
 .idea
 npm-debug.log
 *.jpeg
+screenshot
+docker-compose.yml

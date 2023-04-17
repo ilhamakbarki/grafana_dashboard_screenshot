@@ -15,9 +15,12 @@ app.get('/', function(req, res){
     res.json({"message": "Grafana Dashboard Screenshot Capturing Automation"});
 });
 
+app.use('/screenshoot', express.static('screenshot'));
+
 require('./app/routes/automation.routes.js')(app);
 
 // listen for requests
-app.listen(3000, function(){
-    console.log("Server is listening on port 3000");
+global.PORT = process.env.PORT || 3001;
+app.listen(global.PORT, function(){
+    console.log(`Server is listening on port ${global.PORT}`);
 });
