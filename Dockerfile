@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install gnupg wget -y && \
   sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' && \
   apt-get update && \
   apt-get install google-chrome-stable -y --no-install-recommends
-RUN apt-get install culmus xfonts-efont-unicode xfonts-efont-unicode-ib xfonts-intl-european ttf-mscorefonts-installer
+RUN apt-get install culmus xfonts-efont-unicode xfonts-efont-unicode-ib xfonts-intl-european
 
 RUN   rm -rf /var/lib/apt/lists/*
 
